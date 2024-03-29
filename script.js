@@ -10,11 +10,11 @@ let pts = 0
 let timeScale = 1
 
 gsap.set('.follower', {filter:'drop-shadow(30px 30px 4px rgba(0,0,0,0.1))'})
-gsap.set('.basket', {rotate:125, xPercent:-50, yPercent:-55})
+gsap.set('.basket', {rotate:12, xPercent:-10, yPercent:-15})
 
 window.onpointerdown = (e)=> {
   gsap.timeline({defaults:{duration:0.3, ease:'back.out(4)'}})
-    .to('.basket', {rotate:200, xPercent:-30, scale:0.8}, 0)
+    .to('.basket', {rotate:20, xPercent:-13, scale:0.75}, 0)
     .to('.follower', {filter:'drop-shadow(5px 7px 2px rgba(0,0,0,0.3))'}, 0)
     .add(()=>{ //check distance between veg and basket
       const mark = document.createElement('div')
@@ -49,7 +49,7 @@ window.onpointerdown = (e)=> {
 }
 
 window.onpointerup = (e)=> {
-  gsap.to('.basket', {duration:0.3, rotate:125, xPercent:-50, scale:1})
+  gsap.to('.basket', {duration:0.3, rotate:15, xPercent:-25, scale:1})
   gsap.to('.follower', {duration:0.3, filter:'drop-shadow(30px 30px 4px rgba(0,0,0,0.1))'})
 }
 
