@@ -36,7 +36,7 @@ window.onpointerdown = (e)=> {
             })
           }
           pts++
-          score.innerHTML = 'Sliced '+pts+'<span class="num"> / '+vegNum+'</span>'
+          score.innerHTML = 'Caught '+pts+'<span class="num"> / '+vegNum+'</span>'
           stageFg.append(item)
           gsap.timeline()
           .set(mark, {autoAlpha:0})
@@ -65,7 +65,7 @@ window.onpointermove = (e)=>{
 
 function addveg(){ 
   vegNum++
-  score.innerHTML = 'Sliced '+pts+'<span class="num"> / '+vegNum+'</span>'
+  score.innerHTML = 'Caught '+pts+'<span class="num"> / '+vegNum+'</span>'
   const f = document.createElement('div')
   stageBg.append(f)
   vegTLs.push(
