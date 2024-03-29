@@ -49,7 +49,7 @@ window.onpointerdown = (e)=> {
 }
 
 window.onpointerup = (e)=> {
-  gsap.to('.dagger', {duration:0.3, rotate:125, xPercent:-50, scale:1})
+  gsap.to('.basket', {duration:0.3, rotate:125, xPercent:-50, scale:1})
   gsap.to('.follower', {duration:0.3, filter:'drop-shadow(30px 30px 4px rgba(0,0,0,0.1))'})
 }
 
