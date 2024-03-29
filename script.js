@@ -10,13 +10,13 @@ let pts = 0
 let timeScale = 1
 
 gsap.set('.follower', {filter:'drop-shadow(30px 30px 4px rgba(0,0,0,0.1))'})
-gsap.set('.dagger', {rotate:125, xPercent:-50, yPercent:-55})
+gsap.set('.basket', {rotate:125, xPercent:-50, yPercent:-55})
 
 window.onpointerdown = (e)=> {
   gsap.timeline({defaults:{duration:0.3, ease:'back.out(4)'}})
-    .to('.dagger', {rotate:200, xPercent:-30, scale:0.8}, 0)
+    .to('.basket', {rotate:200, xPercent:-30, scale:0.8}, 0)
     .to('.follower', {filter:'drop-shadow(5px 7px 2px rgba(0,0,0,0.3))'}, 0)
-    .add(()=>{ //check distance between veg and dagger
+    .add(()=>{ //check distance between veg and basket
       const mark = document.createElement('div')
       stageFg.append(mark)
       gsap.fromTo(mark, {innerHTML:'🗯️', x:e.x+84, y:e.y-20, rotate:'random(0,360)'}, {scale:4, duration:0.1, opacity:0.5, onComplete:()=>mark.remove()})    
