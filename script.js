@@ -40,7 +40,7 @@ window.onpointerdown = (e)=> {
           stageFg.append(item)
           gsap.timeline()
           .set(mark, {autoAlpha:0})
-          .set(item, {innerHTML:'💥', rotate:'random(0,200,0)', filter:'drop-shadow(0px 0px 0px rgba(0,0,0,0))'})
+          .set(item, {innerHTML:'🌟', rotate:'random(0,200,0)', filter:'drop-shadow(0px 0px 0px rgba(0,0,0,0))'})
           .to(item, {duration:0.1, scale:2})
           .to(item, {duration:0.1, scale:0, ease:'expo.inOut'})
         }
